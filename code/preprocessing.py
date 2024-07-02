@@ -7,9 +7,9 @@ FILE_PATH = "data/netflix_data.csv"
 uncleaned_df = pd.read_csv(FILE_PATH)
 
 # Setting to display full dataframes in terminal
-pd.set_option('display.width', 500)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
+# pd.set_option('display.width', 500)
+# pd.set_option('display.max_rows', None)
+# pd.set_option('display.max_columns', None)
 
 def display_uncleaned_df_info(uc_df):
     print("\nMissing values from each column: ")
@@ -133,7 +133,6 @@ def display_and_clean(uc_df):
         elif choice == "remove":
             uc_df = df_remove(uc_df)
 
-        # Ask if user wants to change column data types
         uc_df = change_column_dtypes(uc_df)
 
         print("Are you finished working on dataframe? (y,n)")
